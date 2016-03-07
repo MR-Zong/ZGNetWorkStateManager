@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Reachability.h"
 
 @interface ZGNetworkStateManager : NSObject
 
 + (instancetype)shareNetworkStateManager;
 - (void)startNotifier;
 - (void)stopNotifier;
+- (NetworkStatus)checkNetworkState;
 
 @end

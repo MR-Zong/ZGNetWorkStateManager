@@ -7,7 +7,7 @@
 //
 
 #import "ZGNetworkStateManager.h"
-#import "Reachability.h"
+
 
 @interface ZGNetworkStateManager ()
 
@@ -49,7 +49,6 @@
 }
 
 
-
 - (void)startNotifier
 {
     [self.reachability startNotifier];
@@ -65,18 +64,25 @@
     [self checkNetworkState];
 }
 
- - (void)checkNetworkState
+ - (NetworkStatus)checkNetworkState
 {
+    // 1.检测wifi状态
     Reachability *wifiReachability = [Reachability reachabilityForLocalWiFi];
     
-    Reachability *wanReachability = [Reachability reachabilityForInternetConnection];
+    // 2.检测手机是否能上网络(WIFI\3G\2.5G)
+    Reachability *internetConnectionReachability = [Reachability reachabilityForInternetConnection];
     
     if (wifiReachability.currentReachabilityStatus != NotReachable) {
-        NSLog(@"通过wifi联网中。。。");
-    }else if (wanReachability.currentReachabilityStatus != NotReachable){
-        NSLog(@"通过普通网络联网");
+//        NSLog(@"通过wifi联网中.....");
+        return ReachableViaWiFi;
+        
+    }else if (internetConnectionReachability.currentReachabilityStatus != NotReachable){
+//        NSLog(@"通过普通网络联网");
+        return ReachableViaWWAN;
+        
     }else {
-        NSLog(@"没有网络连接");
+//        NSLog(@"没有网络连接");
+        return NotReachable;
     }
 }
 
