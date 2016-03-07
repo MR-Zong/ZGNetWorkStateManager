@@ -73,15 +73,15 @@
     Reachability *internetConnectionReachability = [Reachability reachabilityForInternetConnection];
     
     if (wifiReachability.currentReachabilityStatus != NotReachable) {
-//        NSLog(@"通过wifi联网中.....");
+        NSLog(@"通过wifi联网中.....");
         return ReachableViaWiFi;
         
     }else if (internetConnectionReachability.currentReachabilityStatus != NotReachable){
-//        NSLog(@"通过普通网络联网");
+        NSLog(@"通过普通网络联网");
         return ReachableViaWWAN;
         
     }else {
-//        NSLog(@"没有网络连接");
+        NSLog(@"没有网络连接");
         return NotReachable;
     }
 }
