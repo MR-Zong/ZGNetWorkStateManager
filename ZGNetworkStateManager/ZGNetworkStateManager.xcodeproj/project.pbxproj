@@ -438,7 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZGNetworkStateManager/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGNetworkStateManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,7 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZGNetworkStateManager/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Zong.ZGNetworkStateManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,6 +524,7 @@
 				EFC98A8F1C8D556200C71F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFC98A901C8D556200C71F14 /* Build configuration list for PBXNativeTarget "ZGNetworkStateManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +533,7 @@
 				EFC98A921C8D556200C71F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFC98A931C8D556200C71F14 /* Build configuration list for PBXNativeTarget "ZGNetworkStateManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +542,7 @@
 				EFC98A951C8D556200C71F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
